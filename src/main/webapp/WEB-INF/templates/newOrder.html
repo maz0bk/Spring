@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add new order</title>
+</head>
+
+<body>
+<form th:action="@{'/orders/add'}" th:object="${order}" method="post">
+    Order id: <input type="text" th:field="*{id}"/>
+    <br>
+    Order date: <input type="Date" th:field="*{date}"/>
+    <br>
+    Order cost: <input type="number" th:field="*{cost}"/>
+    <br>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
