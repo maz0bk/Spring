@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+<h1>All authors</h1>
+<!--/*@thymesVar id="product" type="ru.gb.entities.Product"*/-->
+<p th:each="product : ${products}" th:text="${product.name}" />
+</body>
+</html>
