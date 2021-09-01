@@ -17,9 +17,9 @@ public class SpringContextConfiguration {
 
     @Bean @Scope("prototype")
     public Cart cart(){
-        return new Cart(new ArrayList<Product>(),productRepository());
+        return new Cart(new ArrayList<>(),productRepository());
     }
 
-    @Bean @Scope("prototype")
+    @Bean
     public OrderRepository orderRepository(){return new OrderRepository();}
 }
